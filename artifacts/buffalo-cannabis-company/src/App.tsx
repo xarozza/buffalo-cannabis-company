@@ -6,6 +6,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import { Route, Switch, useLocation, Router as WouterRouter, Link } from 'wouter';
 import { ArrowRight, Menu, X } from 'lucide-react';
+import { SiFacebook, SiInstagram, SiTiktok } from 'react-icons/si';
 import logo from '@assets/logo_1792887389023.png';
 import blitzImage from '@assets/buffalo-blitz_1792887389023.jpeg';
 import mafiaImage from '@assets/budz-mafia_1792887389023.jpeg';
@@ -61,31 +62,63 @@ const products = [
   { name: 'Queen City Quake', type: 'Balanced 50/50 Hybrid', profile: 'Sweet Berry, Doughy Vanilla, Sour Gas', description: 'A true earth-shaking phenotype designed to rattle the senses. Queen City Quake perfectly bridges the gap, offering a mouth-watering explosion of sweet, doughy terps followed by a perfectly balanced, long-lasting wave of euphoria. It stacks beautifully in our clean-rooms, flashing vibrant orange hairs and a dense coat of frosty resin.', image: queenImage, width: 598, height: 1024, alt: 'Photograph of Queen City Quake flower held against a leafy background' },
 ];
 
+const socialProfiles = [
+  { name: 'Instagram', href: 'https://www.instagram.com/', Icon: SiInstagram },
+  { name: 'TikTok', href: 'https://www.tiktok.com/', Icon: SiTiktok },
+  { name: 'Facebook', href: 'https://www.facebook.com/', Icon: SiFacebook },
+];
+
+function SocialLinks({ className = '' }: { className?: string }) {
+  return (
+    <div className={`social-links ${className}`} aria-label="Social media">
+      {socialProfiles.map(({ name, href, Icon }) => (
+        <a
+          className="social-link"
+          href={href}
+          key={name}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={name}
+          title={name}
+          data-testid={`link-social-${name.toLowerCase()}`}
+        >
+          <Icon aria-hidden="true" focusable="false" />
+        </a>
+      ))}
+    </div>
+  );
+}
+
 function Header() {
   const [open, setOpen] = useState(false);
   const [location] = useLocation();
   useEffect(() => setOpen(false), [location]);
-  const items = [{ href: '/#about', label: 'Our Story' }, { href: '/#seed-to-sale', label: 'Seed → Sale' }, { href: '/#vault', label: 'The Vault' }, { href: '/journal', label: 'Journal' }, { href: '/#contact', label: 'Contact' }];
+  const items = [{ href: '/#about', label: 'Our Story' }, { href: '/#seed-to-sale', label: 'Seed → Sale' }, { href: '/journal', label: 'Journal' }, { href: '/#contact', label: 'Contact' }];
   return <header className="topbar wrap">
     <Link href="/" className="brand" aria-label="Buffalo Cannabis Company home"><img src={logo} width="1024" height="1024" alt="Buffalo Cannabis Company logo" /></Link>
     <button className="menu-toggle" type="button" aria-label={open ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X size={22} /> : <Menu size={22} />}</button>
     <nav className={`nav-links${open ? ' open' : ''}`} aria-label="Main navigation">
       {items.map(item => <Link key={item.href} href={item.href} data-testid={`link-nav-${item.label.toLowerCase().replaceAll(' ', '-')}`}>{item.label}</Link>)}
-      <button className="nav-cta" type="button" onClick={() => document.getElementById('vault')?.scrollIntoView({ behavior: 'smooth' })}>Explore The Vault</button>
+      <div className="header-utilities">
+        <SocialLinks className="header-socials" />
+        <Link className="nav-cta" href="/#vault" data-testid="link-explore-vault">Explore The Vault <ArrowRight size={15} /></Link>
+      </div>
     </nav>
   </header>;
 }
 
 function Footer() {
   return <footer className="footer">
-    <div className="wrap">
-      <div className="footer-top">
-        <div className="footer-brand"><Link href="/" className="brand"><img src={logo} width="1024" height="1024" alt="Buffalo Cannabis Company logo" /></Link><p>Grown in Buffalo. Made for New York.</p><p>NY Microbusiness License #MB-000000<br />Cultivation #C-000000</p></div>
-        <nav className="footer-links" aria-label="Footer navigation">
-          <Link href="/#about">Our story</Link><Link href="/#seed-to-sale">Seed → Sale</Link><Link href="/#vault">The Vault</Link><Link href="/journal">Journal</Link><Link href="/legal">Legal & safety</Link>
-        </nav>
-      </div>
-      <div className="footer-bottom"><span>© {new Date().getFullYear()} Buffalo Cannabis Company</span><span>For adults 21+ · Please consume responsibly</span></div>
+    <div className="footer-content wrap">
+      <Link href="/" className="footer-brand" aria-label="Buffalo Cannabis Company home">
+        <img src={logo} width="1024" height="1024" alt="Buffalo Cannabis Company logo" />
+      </Link>
+      <p className="footer-license">NY Microbusiness License #MB-000000<br />Cultivation #C-000000</p>
+      <SocialLinks className="footer-socials" />
+      <nav className="footer-links" aria-label="Footer navigation">
+        <Link href="/legal">Legal &amp; Safety</Link>
+      </nav>
+      <small className="footer-bottom">© {new Date().getFullYear()} Buffalo Cannabis Company</small>
     </div>
   </footer>;
 }
@@ -149,7 +182,7 @@ function Home() {
       </section>
       <section className="journal-band"><div className="wrap journal-inner"><div><div className="section-label">From the journal</div><h2>Local roots. Thoughtful notes.</h2></div><Link href="/journal" className="button">Read the journal <ArrowRight size={15} /></Link></div></section>
       <section className="section wrap" id="contact">
-        <div className="contact-grid"><div><div className="section-label">Get in touch</div><h2>Talk to<br />Buffalo.</h2><p className="contact-copy">Questions or just want to say hello? Reach out to Christopher directly.</p><div className="contact-details"><a href="mailto:chrisbrown@buffalocannabiscompany.com">chrisbrown@buffalocannabiscompany.com</a><a href="tel:7163392103">716-339-2103</a><p>501 Amherst Street<br />Buffalo, NY</p></div></div>
+        <div className="contact-grid"><div><div className="section-label">Get in touch</div><h2>Contact</h2><br></br><p className="contact-copy">Questions or just want to say hello? Reach out to Christopher directly.</p><div className="contact-details"><a href="mailto:chrisbrown@buffalocannabiscompany.com">chrisbrown@buffalocannabiscompany.com</a><a href="tel:7163392103">716-339-2103</a><p>501 Amherst Street<br />Buffalo, NY</p></div></div>
           <div><form className="form" onSubmit={contactSubmit}><label htmlFor="contact-name">Your name<input id="contact-name" name="name" required autoComplete="name" /></label><label htmlFor="contact-email">Email address<input id="contact-email" name="email" type="email" required autoComplete="email" /></label><label htmlFor="contact-message">Message<textarea id="contact-message" name="message" rows={4} required /></label><button className="button button-dark" type="submit">Send a note <ArrowRight size={15} /></button><p className="form-message" role="status">{contactMessage}</p><p className="age-small">Preview only. Your message is not sent.</p></form><button className="button button-light" type="button" onClick={() => setNewsletterOpen(true)} style={{ marginTop: 30 }}>Get company updates <ArrowRight size={15} /></button></div>
         </div>
       </section>
