@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Configure the production host here before launch; no production domain has been supplied.
+# Sitemap: set to https://YOUR-PRODUCTION-HOST/sitemap.xml after deployment.

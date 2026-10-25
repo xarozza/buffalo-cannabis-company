@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Buffalo Cannabis Company"
+description = "A responsive website for Buffalo Cannabis Company, a licensed New York cannabis microbusiness, featuring its brand story, strain catalog, legal information, and contact details."
+version = "1.0.0"
+id = "artifacts/buffalo-cannabis-company"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25794
+
+[services.development]
+run = "pnpm --filter @workspace/buffalo-cannabis-company run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/buffalo-cannabis-company", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/buffalo-cannabis-company/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25794"
+BASE_PATH = "/"
