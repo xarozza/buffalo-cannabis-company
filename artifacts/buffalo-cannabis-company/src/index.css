@@ -222,7 +222,7 @@ h1,h2,h3,p { margin-top:0; }
 }
 .age-overlay,.modal-overlay { position:fixed; z-index:30; inset:0; display:grid; place-items:center; background:rgba(28,38,31,.76); padding:22px; }
 .age-panel { width:min(480px,100%); background:#fefbf4; padding:48px 44px 40px; text-align:center; box-shadow:0 22px 90px #151f1980; }
-.age-panel img { width:145px; height:118px; object-fit:contain; background:#fefbf4; margin-bottom:26px; }
+.age-panel img { width:145px; height:118px; object-fit:contain; background:#fefbf4; display:block; margin:0 auto 26px;} 
 .age-panel h2 { font:500 27px/1.25 'Manrope'; letter-spacing:-.035em; margin:0 auto 29px; max-width:370px; }
 .age-actions { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 .age-actions button { min-height:48px; font-size:10px; letter-spacing:.12em; }
