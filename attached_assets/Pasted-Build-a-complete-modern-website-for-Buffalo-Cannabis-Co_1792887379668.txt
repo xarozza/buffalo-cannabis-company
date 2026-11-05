@@ -1,0 +1,60 @@
+Build a complete, modern website for Buffalo Cannabis Company, a licensed New York cannabis microbusiness based in Buffalo. The overall aesthetic should be minimalist, sleek, understaded. Make the website responsive, simple, and easy to maintain. Ensure the website is appropriate for a licensed New York cannabis microbusiness. 
+
+Branding: Our logo has a background color of #fefbf4. Wherever the logo appears, including the header and footer, match the background to this exact color so the logo blends seamlessly into the website.
+Age Verification
+Display an age-verification popup before visitors enter the website. Display the logo and the message: "Welcome to Buffalo Cannabis Company. You must be 21 or older to enter The Vault." Buttons: LEAVE SITE | I AM 21+
+Header & Footer
+The header should contain the logo, navigation links, and social media links. Make the navigation collapsible on mobile. The footer should contain the logo, social media links, copyright information, and license numbers.
+
+Homepage
+Section Hero
+Headline: Grown in Buffalo, Made for New York.
+Include a button linking to The Vault.
+
+Section: "About Us"
+Introduce our founder, Christopher Brown, a Buffalo native born and raised in the city. He understands the tight-knit, hard-working community and is building a Buffalo business.
+
+Section: "Seed → Sale"
+Create a clean, modern Seed → Sale section featuring a simple visual showing the journey from seed to finished product. Use a minimal, connected sequence with subtle icons or line illustrations representing Seed → Cultivation → Processing → Retail, keeping the design sleek and understated. Use this description exactly: “As a licensed New York micro-business, we handle every single step of the process right here in Buffalo under one roof at 501 Amherst Street. From the moment the seed sprouts to the second it’s handed over our retail counter, our hands are on it. This ensures absolute quality, unmatched freshness, and 100% local pride.”
+
+Section: "The Vault"
+Display our products in SIMPLE square cards of the same size with rounded corners, including an image, name, type, profile, and description. Use all product information below exactly as written. Do not change any wording. I've attached three existing product images with this prompt. Make the code easy to add new strains over time are introduced. Make the cards consistent, and ensure product images display correctly at their original proportions without stretching or unwanted cropping. The images may have different dimensions, so the layout should accommodate them gracefully across desktop and mobile screens. The three existing products are listed:
+
+Buffalo Blitz
+Type: Indica-Dominant Hybrid
+Profile: Sharp Citrus, Loud Gas, Earthy Pine
+Description: Engineered for the 716. Buffalo Blitz charges out of the gate with an intense, uplifting cerebral buzz and a heavy gassy nose that completely fills the room. Grown under dialed-in indoor hydro setups at Amherst Street, this phenotype stacks dense, resin-coated buds frosted over with brilliant white trichomes.
+
+Budz Mafia
+Type: Indica-Dominant Hybrid
+Profile: Deep Earth, Spicy Pepper, Creamy Gas
+Description: An absolute heavyweight in the Pheno Vault. Budz Mafia is built for the true connoisseur, delivering an incredibly smooth smoke followed by a deeply relaxing, full-body calm. This phenotype is a standout under our lights, producing rock-hard, dark purple buds completely covered in a sticky layer of crystalline trichomes.
+
+Queen City Quake
+Type: Balanced 50/50 Hybrid
+Profile: Sweet Berry, Doughy Vanilla, Sour Gas
+Description: A true earth-shaking phenotype designed to rattle the senses. Queen City Quake perfectly bridges the gap, offering a mouth-watering explosion of sweet, doughy terps followed by a perfectly balanced, long-lasting wave of euphoria. It stacks beautifully in our clean-rooms, flashing vibrant orange hairs and a dense coat of frosty resin.
+
+Section: Contact
+Make a simple nice contact section.
+Email: chrisbrown@buffalocannabiscompany.com
+Phone: 716-339-2103
+Include a contact form. Do not connect it to a backend, you will only design. The section may use our logo and #fefbf4 color background.
+
+Popup: Newsletter Popup
+Display a newsletter signup popup three seconds after the homepage loads, with an email input and signup button for updates about new products.
+Include a button on the homepage that allows visitors to reopen the popup.
+Build the interface only. Do not connect it to an email marketing service.
+
+Separate Page: Legal
+Include the following license information as placeholders to be replaced with our actual numbers:
+NY Microbusiness License #MB-000000
+Cultivation #C-000000
+Include this statement exactly:
+"For use only by adults 21 years of age and older. Keep out of reach of children and pets. In case of accidental ingestion or overconsumption, contact the Poison Center hotline 1-800-222-1222 or call 9-1-1. Please consume responsibly. Cannabis can be addictive."
+HOPEline Information:
+Phone: 1-877-8-HOPENY or 1-877-846-7369
+Text: HOPENY or 467369
+Website: https://oasas.ny.gov/hopeline
+
+Optimize the website for 2026 SEO best practices, targeting relevant searches such as “Buffalo Cannabis Company,” “Buffalo cannabis microbusiness,” and “New York craft cannabis.” Give every page a unique, descriptive title and meta description, use clear headings and descriptive URLs, optimize image sizes and alt text, ensure fast loading and mobile performance, and implement appropriate structured data and an XML sitemap. Make blog articles indexable and useful, and connect the site to Google Search Console when ready. Keep all content accurate and compliant with New York State cannabis marketing regulations; never promise search rankings or invent business information.
