@@ -229,13 +229,13 @@ function Header() {
         aria-label="Main navigation"
       >
         {items.map((item) => (
-          <Link
+          <a
             key={item.href}
             href={item.href}
             data-testid={`link-nav-${item.label.toLowerCase().replaceAll(" ", "-")}`}
           >
             {item.label}
-          </Link>
+          </a>
         ))}
         <button
           className="nav-cta"
