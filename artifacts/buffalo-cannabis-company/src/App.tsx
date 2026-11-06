@@ -196,10 +196,10 @@ function Header() {
   const [location] = useLocation();
   useEffect(() => setOpen(false), [location]);
   const items = [
-    { href: "/#about", label: "Our Story" },
-    { href: "/#seed-to-sale", label: "Seed → Sale" },
+    { href: `${import.meta.env.BASE_URL}#about`, label: "Our Story" },
+    { href: `${import.meta.env.BASE_URL}#seed-to-sale`, label: "Seed → Sale" },
     { href: "/journal", label: "Journal" },
-    { href: "/#contact", label: "Contact" },
+    { href: `${import.meta.env.BASE_URL}#contact`, label: "Contact" },
   ];
   return (
     <header className="topbar wrap">
