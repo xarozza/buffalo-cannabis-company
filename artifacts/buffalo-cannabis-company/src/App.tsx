@@ -198,7 +198,7 @@ function Header() {
   const items = [
     { href: `${import.meta.env.BASE_URL}#about`, label: "Our Story" },
     { href: `${import.meta.env.BASE_URL}#seed-to-sale`, label: "Seed → Sale" },
-    { href: "/journal", label: "Journal" },
+    { href: `${import.meta.env.BASE_URL}journal`, label: "Journal" },
     { href: `${import.meta.env.BASE_URL}#contact`, label: "Contact" },
   ];
   return (
